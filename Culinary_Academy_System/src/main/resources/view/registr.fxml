@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="registrPane" prefHeight="775.0" prefWidth="1242.0" style="-fx-background-color: #344C64;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegistrController">
+   <children>
+      <Text layoutX="75.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.2395833333333334">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color blue="0.19368420541286469" green="0.19368420541286469" red="0.24210526049137115" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color blue="1.0" green="1.0" red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <TableView fx:id="tbl_registr" layoutX="61.0" layoutY="506.0" prefHeight="248.0" prefWidth="1167.0" style="-fx-border-radius: 15;">
+         <columns>
+            <TableColumn fx:id="col_registr_id" prefWidth="166.0" text="Registr ID" />
+            <TableColumn fx:id="col_student_id" prefWidth="221.0" text="Student ID" />
+            <TableColumn fx:id="col_program_id" prefWidth="216.0" text="program ID" />
+            <TableColumn fx:id="col_registr_fee" prefWidth="274.0" text="Registr fee" />
+            <TableColumn fx:id="col_registr_date" prefWidth="289.0" text="Registr Date" />
+         </columns>
+      </TableView>
+      <Button layoutX="966.0" layoutY="143.0" mnemonicParsing="false" onAction="#btn_save_onAction" prefHeight="41.0" prefWidth="259.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-background-color: blue;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="966.0" layoutY="201.0" mnemonicParsing="false" onAction="#btn_update_onAction" prefHeight="41.0" prefWidth="259.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-background-color: yellow;" text="Update">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color blue="0.75789475440979" green="0.4105730950832367" red="0.03929824382066727" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color blue="0.9684210419654846" green="0.3228070139884949" red="0.19368420541286469" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button layoutX="974.0" layoutY="258.0" mnemonicParsing="false" onAction="#btn_delete_onAction" prefHeight="42.0" prefWidth="245.0" style="-fx-border-color: red; -fx-border-radius: 15; -fx-background-radius: 15; -fx-background-color: red;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="974.0" layoutY="314.0" mnemonicParsing="false" onAction="#btn_clear_onAction" prefHeight="42.0" prefWidth="245.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-background-color: brown;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="75.0" layoutY="117.0" prefHeight="560.0" prefWidth="835.0" style="-fx-border-radius: 15; -fx-border-width: 1;">
+         <children>
+            <TextField fx:id="txt_registr_id" layoutX="332.0" layoutY="32.0" prefHeight="41.0" prefWidth="436.0" promptText="Registr id ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_registr_fee" layoutX="332.0" layoutY="225.0" prefHeight="41.0" prefWidth="436.0" promptText="Registr Fee">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" layoutX="217.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registr ID :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="201.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Date :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="214.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registr fee :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="216.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="txt_reg_date" layoutX="332.0" layoutY="299.0" prefHeight="32.0" prefWidth="436.0" promptText="Registr Date " />
+            <ComboBox fx:id="cmb_student_id" layoutX="332.0" layoutY="107.0" prefHeight="32.0" prefWidth="436.0" promptText="Student ID" />
+            <Text fill="WHITE" layoutX="210.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Program ID:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="cmb_program_id" layoutX="332.0" layoutY="162.0" prefHeight="32.0" prefWidth="436.0" promptText="Program ID" />
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="289.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" STUDENTS REGISTER FORM" wrappingWidth="680.814453125">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

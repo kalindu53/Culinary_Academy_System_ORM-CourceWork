@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="registrPane" prefHeight="775.0" prefWidth="1242.0" style="-fx-background-color: #41B06E;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PaymentFormController">
+   <children>
+      <Text layoutX="75.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.2395833333333334">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color blue="0.19368420541286469" green="0.19368420541286469" red="0.24210526049137115" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color blue="1.0" green="1.0" red="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <TableView fx:id="tbl_Payment" layoutX="61.0" layoutY="506.0" prefHeight="235.0" prefWidth="1127.0" style="-fx-border-radius: 15;">
+         <columns>
+            <TableColumn fx:id="col_payment_ID" prefWidth="95.0" text="payment_Id" />
+            <TableColumn fx:id="col_registr_ID" prefWidth="140.0" text="Registr ID" />
+            <TableColumn fx:id="col_FullCourse_fee" prefWidth="138.0" text="Full Course fee" />
+            <TableColumn fx:id="col_paid_Amount" prefWidth="164.0" text="Advance" />
+            <TableColumn fx:id="col_Amount" prefWidth="135.0" text="Amount" />
+            <TableColumn fx:id="col_pay" prefWidth="140.0" text="cash" />
+            <TableColumn fx:id="col_balance" prefWidth="314.0" text="Balance" />
+         </columns>
+      </TableView>
+      <Button layoutX="392.0" layoutY="438.0" mnemonicParsing="false" onAction="#btn_Payment_onAction" prefHeight="41.0" prefWidth="496.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-background-color: red;" text="Pay" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="1022.0" layoutY="440.0" mnemonicParsing="false" onAction="#btn_clear_onAction" prefHeight="32.0" prefWidth="94.0" style="-fx-border-radius: 15; -fx-background-radius: 15; -fx-background-color: yellow;" text="Clear">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="96.0" layoutY="117.0" prefHeight="299.0" prefWidth="1106.0" style="-fx-border-radius: 15; -fx-border-width: 1;">
+         <children>
+            <TextField fx:id="txtAmount" layoutX="666.0" layoutY="142.0" prefHeight="47.0" prefWidth="417.0" promptText="Amount">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" layoutX="35.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="553.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="35.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registr ID:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="553.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Advance :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="cmb_Registr_ID" layoutX="136.0" layoutY="140.0" prefHeight="47.0" prefWidth="354.0" promptText="Registr ID " />
+            <TextField fx:id="txtPaidAmount" layoutX="666.0" layoutY="74.0" prefHeight="47.0" prefWidth="417.0" promptText="Advance">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_Full_Course_Fee" layoutX="136.0" layoutY="216.0" prefHeight="47.0" prefWidth="354.0" promptText="course fee">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_payment_ID" layoutX="136.0" layoutY="72.0" prefHeight="47.0" prefWidth="354.0" promptText="payment ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" layoutX="35.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Course fee :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="563.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cash   :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtCash" layoutX="666.0" layoutY="208.0" prefHeight="47.0" prefWidth="417.0" promptText="cash">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="519.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment" wrappingWidth="225.814453125">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
